@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* div selection */
+        /* div{
+            color: red;
+            background-color: yellow;
+        } */
+        /* Class selector */
+        .red{
+            color: blue;
+            background-color: green;
+        }
+        /* id Selector */
+        #green{
+            color:green;
+            background-color: orange;
+        }
+        /* Child Selector */
+        div>p{
+            color: red;
+            background-color: yellow;
+        }
+        /* decendent selector */
+        /* div p{
+            columns: red;
+            background-color: black;
+        } */
+        /* Universal Selector */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* Pseudo Selector */
+        a:visited{
+            color: red;
+        }
+        a:hover{
+            color: green;
+        }
+        a:link{
+            color: orange;
+        }
+        a:active{
+            background-color: blue;
+        }
+        /* p:first-child{
+            background-color: yellow;
+        } */
+    </style>
+</head>
+<body>
+    <div>
+        <p>Im paragraph of first div</p>
+    </div>
+    <div class="red">
+        <article>
+            <p>Im paragraph of dic class red</p>
+        </article>
+    </div>
+    <div id="green">
+        im paragraph in id green
+    </div>
+    <a href="https://www.google.com" target="_blank">Google</a>
+</body>
+</html>
