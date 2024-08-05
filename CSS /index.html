@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model and Margin Collapse</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box{
+            background-color: cyan;
+        }
+        .box1{
+            color: red;
+            padding:10px;
+            margin:10px;
+            border:2px solid black;
+            height:200px;
+            box-sizing: border-box;
+        }
+        .box2{
+            color: yellow;
+            padding: 10px;
+            margin:20px;
+            border:3px dotted black;
+            height:200px;
+            box-sizing: border-box;
+        }
+        /* Margin collapse happend between box1 and box2 ---> Box1 contains margin 10px where as box2 has margin 20px, as the margin of box2 is greater than box1 box2's margin will be the distance between box1 and box2 */
+    </style>
+</head>
+<body>
+    <div class="box box1">Element of Box1</div>
+    <div class="box box2">Element of Box2</div>
+</body>
+</html>
