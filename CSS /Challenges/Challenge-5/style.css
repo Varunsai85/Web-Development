@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primarycolor: rgb(172, 14, 172);
+    --secondarycolor: rgb(214, 123, 214);
+    --deffont: "Poppins", sans-serif;
+    --fontweight: 400;
+    --textcolor: white;
+    --bodrad:33px;
+}
+
+body {
+    background-color: var(--secondarycolor);
+}
+
+header{
+    background-color: var(--primarycolor);
+    position: sticky;
+    top:0px;
+}
+
+ul {
+    padding: 12px 0;
+}
+
+ul li {
+    font-family: var(--deffont);
+    font-weight: var(--fontweight);
+    list-style: none;
+    display: inline;
+    padding: 30px;
+    color: var(--textcolor);
+}
+
+ul:first-child {
+    padding-left: 50px;
+}
+.lbox{
+    width:95vw;
+    height: 500px;
+    background-color: rgb(150, 1, 192);
+    margin:auto;
+    border-radius: var(--bodrad);
+}
+.box1 {
+    height: 400px;
+    width: 400px;
+    background-color: rgb(124, 28, 144);
+    border-radius: var(--bodrad);
+    margin: 50px 150px;
+}
+
+.box2 {
+    height: 400px;
+    width: 400px;
+    background-color: rgb(180, 69, 203);
+    border-radius: var(--bodrad);
+    margin: 50px 150px;
+}
+
+.boxes {
+    display: flex;
+}
+main{
+    margin:40px auto;
+}
+.box3 {
+    font-family: var(--deffont);
+    font-weight: var(--fontweight);
+    font-size: 45px;
+    text-align: center;
+    background-color: blueviolet;
+    color: var(--textcolor);
+    padding: 50px;
+    width: 1000px;
+    margin: auto;
+    border-radius: var(--bodrad);
+}
+
+.circle {
+    fill: rgb(226, 12, 226);
+    position:fixed;
+    bottom:5px;
+    right:5px;
+}
+.box4{
+    height:20vh;
+    width:100vw;
+    background-color: var(--textcolor);
+    margin-top:200px;
+}
