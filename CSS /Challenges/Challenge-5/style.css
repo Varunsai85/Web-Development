@@ -81,12 +81,14 @@ main{
     margin: auto;
     border-radius: var(--bodrad);
 }
-
-.circle {
-    fill: rgb(226, 12, 226);
+.circle{
+    height: 50px;
+    width:50px;
     position:fixed;
-    bottom:5px;
     right:5px;
+    bottom: 5px;
+    background-color: var(--primarycolor);
+    border-radius: var(--bodrad);
 }
 .box4{
     height:20vh;
