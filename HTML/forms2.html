@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms2</title>
+</head>
+
+<body>
+    <form action="/submit">
+        <div>
+            <label for="Password">Password : </label>
+            <input type="password" name="Password" placeholder="Enter your password" id="Password" autofocus required>
+        </div>
+        <div>
+            <label for="gender">Gender : </label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+        <div>
+            <!-- <label for="subscribe">Subscribe : </label> -->
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label for="subscribe">Subscribe to newsletter</label>
+        </div>
+        <div>
+            <input type="date" name="submit" id="submit">
+        </div>
+        <div>
+            <textarea name="Comments" id="comment" placeholder="Enter your comment here" rows="7" cols="50"></textarea>
+        </div>
+        <div>
+            <select name="Selection" id="fruits">
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+                <option value="cherry">Cherry</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" name="submit" id="submit">
+            <input type="text" pattern="[a-zA-Z0-9]+">
+        </div>
+        <div>
+            <svg height="100" width="100">
+                <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+            </svg>
+        </div>
+    </form>
+</body>
+
+</html>
