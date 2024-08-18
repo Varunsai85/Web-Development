@@ -1,4 +1,4 @@
-console.log("Hey this is tutorial 55");
+console.log("Hey this is My First JS print statement");
 
 var a = 5;
 // a = a + 1
