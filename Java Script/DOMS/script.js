@@ -1,0 +1,12 @@
+console.log("Document Object Model")
+const container=document.body
+container.firstElementChild
+container.children
+container.childnodes
+container.childNodes
+container.firstElementChild.childNodes
+container.firstElementChild.children
+const container2=container.firstElementChild.children
+const container1=container.firstElementChild
+container1.nextElementSibling
+container1.firstElementChild.nextElementSibling
