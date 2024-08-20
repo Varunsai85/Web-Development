@@ -49,4 +49,5 @@ cont.classList.toggle("blue")
 cont.classList.toggle("blue")
 console.log(cont.classList)
 
-
+let rem=document.querySelector(".container").lastElementChild
+rem.remove()
