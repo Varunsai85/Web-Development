@@ -21,3 +21,6 @@ document.querySelectorAll(".box").forEach((e)=>{
 console.log(document.getElementsByTagName("div"))
 console.log(document.getElementsByName("x"))
 
+for(i of document.querySelectorAll(".box")){
+    console.log(i)
+}
