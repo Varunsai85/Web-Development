@@ -1,0 +1,1 @@
+console.log("Im log from your sibling script assholeee");
