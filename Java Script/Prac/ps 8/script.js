@@ -4,6 +4,12 @@ document.getElementById("masbtn1").addEventListener("click",()=>{
     alert("Hello im btn1")
 })
 //Q4
-setInterval(()=>{
+// setInterval(()=>{
+//     document.querySelector(".bulb").classList.toggle("glow")
+// },300)
+setTimeout(() => {
     document.querySelector(".bulb").classList.toggle("glow")
-},300)
+    document.querySelector(".container").classList.toggle("container")
+}, 1000);
+
+console.log(document.querySelector(".container").classList);
