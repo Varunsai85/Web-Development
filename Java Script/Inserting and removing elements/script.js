@@ -50,4 +50,6 @@ cont.classList.toggle("blue")
 console.log(cont.classList)
 
 let rem=document.querySelector(".container").lastElementChild
-rem.remove()
+// rem.remove()
+console.log(cont.classList.add("container2"))
+console.log(cont.classList)
