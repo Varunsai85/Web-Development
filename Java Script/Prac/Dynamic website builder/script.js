@@ -7,7 +7,9 @@ function CreateCard(title, cname, views, months, duration, thumbnail, imagedesc)
     } else {
         viewstr = views / 1000 + "K"
     }
-    let html = `<div class="card">
+    let card=document.createElement("div")
+    card.className="card"
+    let html = `
             <div class="image">
                 <img src="${thumbnail}"
                     alt="${imagedesc}">
@@ -20,8 +22,9 @@ function CreateCard(title, cname, views, months, duration, thumbnail, imagedesc)
                     <li>${viewstr} views</li>
                     <li>${months} months ago</li>
                 </div>
-            </div>
-        </div>`
-    document.querySelector(".container").insertAdjacentHTML("beforeend",html)
+            </div>`
+    card.innerHTML=html
+    // document.querySelector(".container").insertAdjacentHTML("beforeend",html)
+    document.querySelector(".card").replaceWith(card)
 }
 CreateCard("JavaScript Interview Questions | Sigma Web Development Course - Tutorial #83", "CodeWithHarry", 70000, 7, "21:07", "https://i.ytimg.com/vi/Vwxs9YJWsx4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBbLIHV7SeiDCL7viZJ4ltmBTantw", "Interview Questions Thumbnail")
