@@ -1,5 +1,4 @@
 console.log("Callback functions and promise");
-Promise
 let prom1=new Promise((resolve,reject)=>{
     let a=Math.random()
     if(a<0.3){
@@ -17,7 +16,6 @@ prom1.then((a)=>{
 }).catch((err)=>{
     console.log(err);
 })
-Promise.resolve("Yoo")
 //Callback functions
 // console.log("Hello");
 // const Callback=(arg,script)=>{
