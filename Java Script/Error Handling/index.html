@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+
+<body>
+    <script>
+        console.log("Error Handling");
+        let a = prompt("Enter the first Number")
+        let b = prompt("Enter the second Number")
+        if (isNaN(a) || isNaN(b)) {
+            throw SyntaxError("Enter only Numbers Broo...")
+        }
+        let sum = parseInt(a) + parseInt(b)
+       function main(){
+            let x=1
+            try {
+                console.log("The sum =",sum * x);
+                return true
+            } catch (error) {
+                console.log("Error brooo");
+                return false
+            }finally{
+                console.log("DB connection and code executed");
+            }
+        }
+        let fuc=main()
+    </script>
+</body>
+
+</html>
