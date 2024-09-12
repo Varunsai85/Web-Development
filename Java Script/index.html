@@ -8,19 +8,14 @@
 </head>
 
 <body>
-    <img id="image"
-        src="https://imgs.search.brave.com/Ef0a4NBvPmBjJRNWKgfYTdahdnv4tRWx6nFpFmzrTeo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC9oVGxZWmhK/LmpwZw"
-        alt="MDN logo" width="72" />
-    <div><button onclick="reload()">Reload</button></div>
-    <script>
-        const image = document.getElementById("image");
-        image.onload = () => {
-            document.body.appendChild(document.createElement("div")).textContent = "loaded!";
-        }
-
-        function reload() {
-            image.src = "https://i.pinimg.com/736x/c5/ec/a2/c5eca2d834452f9a91d98cf2b13e76bb.jpg";
-        }
-    </script>
+    <button id="btn">Youtube</button>
+    <!-- <script>
+        let button=document.getElementById("btn");
+        button.addEventListener("click",(e)=>{
+            alert("yo guys");
+            console.log(e.type);
+        });
+    </script> -->
+    <script src="prac.js"></script>
 </body>
 </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Seek Bar</title>
+    <style>
+        .seek-bar {
+            width: 100%;
+        }
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="audioPlayer" src="your-audio-file.mp3" preload="metadata"></audio>
+
+    <input type="range" id="seekBar" class="seek-bar" value="0" min="0" max="100">
+
+    <div class="controls">
+        <button id="playPauseBtn">Play</button>
+        <span id="timeDisplay">0:00</span>
+    </div>
+
+    <script>
+        const audioPlayer = document.getElementById('audioPlayer');
+        const seekBar = document.getElementById('seekBar');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const timeDisplay = document.getElementById('timeDisplay');
+
+        // Play or Pause the audio
+        playPauseBtn.addEventListener('click', function() {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                playPauseBtn.textContent = 'Pause';
+            } else {
+                audioPlayer.pause();
+                playPauseBtn.textContent = 'Play';
+            }
+        });
+
+        // Update seek bar and time display as the audio plays
+        audioPlayer.addEventListener('timeupdate', function() {
+            const currentTime = audioPlayer.currentTime;
+            const duration = audioPlayer.duration;
+
+            // Update the seek bar value based on current time
+            const seekPosition = (currentTime / duration) * 100;
+            seekBar.value = seekPosition;
+
+            // Update time display
+            timeDisplay.textContent = formatTime(Math.floor(currentTime));
+        });
+
+        // Update audio current time when seeking
+        seekBar.addEventListener('input', function() {
+            const seekValue = seekBar.value;
+            const duration = audioPlayer.duration;
+            audioPlayer.currentTime = (seekValue / 100) * duration;
+        });
+
+        // Format time in minutes:seconds
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = Math.floor(seconds % 60);
+            return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+        }
+    </script>
+
+</body>
+</html>
