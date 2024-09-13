@@ -4,6 +4,9 @@ const port = 3000
 const blog=require('./routes/blog.js')
 
 app.use("/public",express.static("public"))
+
+//If there is index.html in the public folder then the html will be directly served into the webpage.......(Important point)
+
 app.use('/blog',blog)
 //Chainig of the requests
 app.get('/', (req, res) => {
