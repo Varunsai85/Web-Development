@@ -6,7 +6,7 @@ import {model} from "./Models/validation.js"
 
 app.set('view engine','ejs')
 
-let conn=await mongoose.connect("mongodb://localhost:27017/Employees")
+let conn=await mongoose.connect("mongodb://localhost:27017/Emploees")
 
 
 app.get("/",(req,res)=>{
