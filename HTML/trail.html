@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            height: 75px;
+            width: 75px;
+            background-color: aqua;
+        }
+
+        .container {
+            margin: 2px;
+            height: 150px;
+            width: 150px;
+            background-color: red;
+        }
+
+        .option {
+            margin: 2px;
+            width: 150px;
+            height: 0px;
+            color: white;
+            background-color: black;
+            transition-property: height;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in-out;
+            overflow: hidden;
+        }
+        .selection{
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container flex-box">
+        <div class="box selection flex-box">Click me</div>
+    </div>
+    <div class="option flex-box">
+        hello
+    </div>
+    <div class="container flex-box"></div>
+    <script>
+        let toggle=document.querySelector(".option");
+        console.log(typeof(toggle.style.height));
+        document.querySelector(".box").addEventListener("click",() => {
+            if(toggle.style.height=="150px"){
+                toggle.style.height="0px";
+            }else{
+                toggle.style.height="150px";
+            }
+            console.log(toggle.style.height);
+        })
+
+        let prom1=new Promise((resolve,reject)=>{
+            let rand=Math.random();
+            if(rand<0.5){
+                reject("random is less than 0.5")
+            }else{
+                setTimeout(()=>{
+                    resolve("random is greater than 0.5")
+                },2000)
+            }
+        })
+        let prom2=new Promise((resolve,reject)=>{
+            let rand=Math.random();
+            if(rand<0.2){
+                reject("random is less than 0.2")
+            }else{
+                setTimeout(()=>{
+                    resolve("random is greater than 0.2")
+                },2000)
+            }
+        })
+        let p3=Promise.any([prom1,prom2])
+        p3.then(e=>{
+            console.log(e);
+            console.log("Hello");
+        }).catch(e=>{
+            console.log(e);
+        })
+        
+    </script>
+</body>
+
+</html>
